@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Contest Reminder",
+    "version": "1.0",
+    "description": "Automatically create Google Calendar reminders when registering for contests on Codeforces or LeetCode.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "identity"
+    ],
+    "host_permissions": [
+        "https://codeforces.com/*",
+        "https://leetcode.com/*",
+        "https://www.googleapis.com/*"
+    ],
+    "oauth2": {
+        "client_id": "216019559948-39ko0o7sre2nqglaehhmda1rns7hg0lh.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar.events"
+        ]
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://codeforces.com/*",
+                "https://leetcode.com/contest*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
