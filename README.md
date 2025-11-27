@@ -38,6 +38,9 @@ This extension is **completely serverless**:
 4. Grant calendar permissions
 5. Future registrations will automatically create calendar events!
 
+> [!IMPORTANT]
+> **Timezone Configuration:** Make sure your Google Calendar is set to **Indian Standard Time (IST/Asia/Kolkata)** for accurate event times. You can change this in [Google Calendar Settings](https://calendar.google.com/calendar/u/0/r/settings) → General → Time zone.
+
 ## Usage
 
 1. Navigate to a contest page on LeetCode or Codeforces
